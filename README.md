@@ -124,6 +124,9 @@ Both parties derive the exact same 32-byte shared key, but an eavesdropper (or t
 
 The core protocol layer is designed as a **pure-logic state machine** in [src/smtp-state-machine.js](file:///home/ubuntu/workers/smtp/src/smtp-state-machine.js). It performs no network or disk I/O, allowing it to run identically in browsers, CLI environments, or Cloudflare Worker threads.
 
+> [!NOTE]
+> **Emulation vs. Production**: The SMTP state machine is primarily an educational simulation layer (accessible via the `/api/smtp/feed` endpoint). In real-world production, both the Web SPA and the CLI client bypass this interactive SMTP flow and communicate directly with the **stateless HTTPS API** (e.g., `/api/send`, `/api/inbox`) for simplicity, performance, and robustness.
+
 ### 8 Protocol States
 
 | State | Purpose | Allowed Commands |
