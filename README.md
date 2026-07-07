@@ -263,4 +263,8 @@ Ensure you have the Wrangler CLI installed and authenticated.
 
 ## License
 
-Personal project. Provided "as-is" without warranty. Feel free to clone, host, and use for private communications with your peers.
+This project is licensed under a custom license:
+* **Personal Use**: You are free to use, modify, host, and run the project for personal, non-commercial purposes.
+* **Commercial Use**: Any commercial use, redistribution, or integration into commercial/paid services is strictly prohibited without explicit written permission from the copyright holder (collar2023).
+
+Copyright (c) 2026 collar2023. All rights reserved.
