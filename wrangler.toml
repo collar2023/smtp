@@ -1,0 +1,30 @@
+name = "smtp"
+main = "index.js"
+compatibility_date = "2026-06-12"
+compatibility_flags = ["nodejs_compat"]
+
+[placement]
+mode = "smart"
+
+# 加密邮件原文
+[[r2_buckets]]
+binding = "MAIL_BUCKET"
+bucket_name = "smtp-mail"
+
+# 元数据: 发件人指纹/时间/大小
+[[d1_databases]]
+binding = "MAIL_DB"
+database_name = "smtp-mail-db"
+database_id = "c3ece9aa-05ba-4878-9b06-75d000569c60"
+
+# 公钥目录 + 在线状态
+[[kv_namespaces]]
+binding = "KEYRING_KV"
+id = "7c80853c33284c74bc6816e9ec69614c"
+
+[observability]
+enabled = true
+
+[[routes]]
+pattern = "smtp.aillm.net"
+custom_domain = true
